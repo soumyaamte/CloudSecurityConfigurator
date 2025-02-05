@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cloud Security Analysis Report</h1>
+        <p><strong>Total Resources Analyzed:</strong> {{ report.total_resources }}</p>
+        <p><strong>Total Issues Identified:</strong> {{ report.total_issues }}</p>
+
+        {% if report.issues %}
+            <h2>Identified Security Issues</h2>
+            <ul>
+                {% for issue in report.issues %}
+                    <li>
+                        <strong>{{ issue.issue }}</strong> (Resource: {{ issue.name }}) <br>
+                        <span class="description">{{ issue.description }}</span><br>
+                        <span class="recommendation"><em>Recommendation:</em> {{ issue.recommendation }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No security issues found. Your configuration looks secure!</p>
+        {% endif %}
+    </div>
+</body>
+</html>
