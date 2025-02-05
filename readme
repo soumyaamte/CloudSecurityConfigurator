@@ -1,7 +1,7 @@
-# Cloud Security Configurator - README
+# Cloud Security Configurator
 
 ## Overview
-Cloud Security Configurator is a web application that helps users identify and mitigate potential security vulnerabilities in their cloud infrastructure. 
+Cloud Security Configurator is a web application designed to help users identify and mitigate potential security vulnerabilities in their cloud infrastructure.
 Users can upload a configuration file in JSON format, and the application will analyze it for security issues, providing a detailed report with recommendations for improvement.
 
 ## Features
@@ -27,6 +27,20 @@ Users can upload a configuration file in JSON format, and the application will a
 $ git clone https://github.com/soumyaamte/CloudSecurityConfigurator.git
 $ cd CloudSecurityConfiguration
 ```
+3. Set Up a Virtual Environment (Recommended)
+Using a virtual environment helps isolate dependencies and avoid conflicts.
+
+###Windows (PowerShell)
+```sh
+python -m venv venv
+venv\Scripts\Activate
+```
+###Mac/Linux
+```sh
+python3 -m venv venv
+source venv/bin/activate
+```
+Once activated, the terminal should show (venv) before the command prompt.
 
 ### Install Dependencies
 ```sh
@@ -83,5 +97,5 @@ The uploaded JSON file should follow this structure:
 - The application is designed for local use and not optimized for large-scale deployments.
 
 ## Contact
-For any issues or suggestions, please reach out to Soumya Amte at soumyaamte07@outlook.com.
+For any issues or suggestions, please reach out to **Soumya Amte** at **soumyaamte07@outlook.com**.
 
