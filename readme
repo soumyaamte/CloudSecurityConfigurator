@@ -1,0 +1,103 @@
+# Cloud Security Configurator - README
+
+## Overview
+Cloud Security Configurator is a web application that helps users identify and mitigate potential security vulnerabilities in their cloud infrastructure. 
+Users can upload a configuration file in JSON format, and the application will analyze it for security issues, providing a detailed report with recommendations for improvement.
+
+## Features
+- **File Upload**: Users can upload a JSON file containing their cloud infrastructure configuration.
+- **Configuration Analysis**: The application scans the JSON file for security vulnerabilities such as weak passwords, open ports, and lack of encryption.
+- **Report Generation**: The app generates a report highlighting security issues and provides actionable recommendations.
+- **User-Friendly Interface**: A simple and intuitive web UI for uploading files and viewing security reports.
+
+## Technology Stack
+- **Backend**: Flask (Python)
+- **Frontend**: HTML, CSS, JavaScript
+- **Styling**: CSS for basic styling
+- **Hosting**: Can be run locally using Flask
+
+## Installation and Setup
+
+### Prerequisites
+- Python 3.x installed
+- pip (Python package manager)
+
+### Clone the Repository
+```sh
+$ git clone <repository-url>
+$ cd CloudSecurityConfiguration
+```
+
+### Install Dependencies
+```sh
+$ pip install -r requirements.txt
+```
+
+### Run the Application
+```sh
+$ python app.py
+```
+
+### Access the Web Application
+Once the application is running, open a web browser and navigate to:
+```
+http://127.0.0.1:5000/
+```
+
+## Usage
+1. Open the application in your browser.
+2. Click on the file input to upload a JSON configuration file.
+3. Click the "Upload" button to analyze the configuration.
+4. View the generated security report with detected issues and recommendations.
+
+## JSON Configuration Format
+The uploaded JSON file should follow this structure:
+```json
+{
+  "resources": [
+    {
+      "type": "virtual_machine",
+      "name": "vm1",
+      "open_ports": [22, 80, 443],
+      "password": "weakpassword",
+      "encryption": false,
+      "mfa_enabled": false
+    },
+    {
+      "type": "storage_account",
+      "name": "storage1",
+      "encryption": false
+    }
+  ]
+}
+```
+
+## Security Checks Implemented
+- **Weak Password Detection**: Flags resources with easily guessable passwords.
+- **Encryption Disabled**: Warns if encryption is not enabled.
+- **Open Ports Detection**: Identifies open ports that may expose the system to security risks.
+
+## Screenshots
+### Upload Page:
+![Upload Page](screenshots/upload.png)
+
+### Security Report:
+![Report Page](screenshots/report.png)
+
+## Assumptions
+- The JSON file is structured correctly as per the given format.
+- The security analysis is basic and does not replace professional security audits.
+- The application is designed for local use and not optimized for large-scale deployments.
+
+## Future Enhancements
+- Expand security checks (e.g., MFA enforcement, firewall rules validation)
+- Improve UI design for a better user experience
+- Add authentication for secure access
+- Allow users to download the security report as a PDF
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For any issues or suggestions, please reach out to [Your Name] at [Your Email].
+
