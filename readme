@@ -24,7 +24,7 @@ Users can upload a configuration file in JSON format, and the application will a
 
 ### Clone the Repository
 ```sh
-$ git clone <repository-url>
+$ git clone https://github.com/soumyaamte/CloudSecurityConfigurator.git
 $ cd CloudSecurityConfiguration
 ```
 
@@ -77,27 +77,11 @@ The uploaded JSON file should follow this structure:
 - **Encryption Disabled**: Warns if encryption is not enabled.
 - **Open Ports Detection**: Identifies open ports that may expose the system to security risks.
 
-## Screenshots
-### Upload Page:
-![Upload Page](screenshots/upload.png)
-
-### Security Report:
-![Report Page](screenshots/report.png)
-
 ## Assumptions
 - The JSON file is structured correctly as per the given format.
 - The security analysis is basic and does not replace professional security audits.
 - The application is designed for local use and not optimized for large-scale deployments.
 
-## Future Enhancements
-- Expand security checks (e.g., MFA enforcement, firewall rules validation)
-- Improve UI design for a better user experience
-- Add authentication for secure access
-- Allow users to download the security report as a PDF
-
-## License
-This project is licensed under the MIT License.
-
 ## Contact
-For any issues or suggestions, please reach out to [Your Name] at [Your Email].
+For any issues or suggestions, please reach out to Soumya Amte at soumyaamte07@outlook.com.
 
